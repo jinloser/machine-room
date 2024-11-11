@@ -574,7 +574,7 @@ const createPowerControlModel = (
         (10 - (cabinetNum > rowNum ? rowNum : cabinetNum)) * cabinetWidth +
         offsetX,
       y: 0,
-      z: 0,
+      z: 250,
     },
     '电源系统'
   );
@@ -586,7 +586,7 @@ const createPowerControlModel = (
         (10 - (cabinetNum > rowNum ? rowNum : cabinetNum)) * cabinetWidth +
         offsetX,
       y: 116,
-      z: 0,
+      z: 250,
     },
     'NRDA-300',
     (model: any) => {
@@ -643,7 +643,7 @@ const createBatteryModels = async (
     cabinetDummy.position.set(
       (colIndex - 10) * cabinetWidth + offsetX,
       0,
-      -(rowIndex - 1) * cabinetDepth
+      -(rowIndex - 2) * cabinetDepth
     );
     cabinetDummy.updateMatrix();
     cabinetInstances.setMatrixAt(cabinetIndex, cabinetDummy.matrix); // 设置实例变换矩阵
@@ -653,7 +653,7 @@ const createBatteryModels = async (
     doorDummy.position.set(
       (colIndex - 10) * cabinetWidth + offsetX - 40,
       6,
-      -(rowIndex - 1) * cabinetDepth + 48
+      -(rowIndex - 2) * cabinetDepth + 48
     );
     doorDummy.updateMatrix();
     doorInstances.setMatrixAt(cabinetIndex, doorDummy.matrix); // 设置实例变换矩阵
@@ -666,7 +666,7 @@ const createBatteryModels = async (
         if (batteryCounter > batteryNum) break; // 超过电池总数则停止
         const xPos = (colIndex - 10) * cabinetWidth - 30 + posInFront * 20; // 水平方向
         const yPos = layer * layerHeight + 20; // 垂直方向
-        const zPos = -(rowIndex - 1) * cabinetDepth + frontOffset; // 前排纵深位置
+        const zPos = -(rowIndex - 2) * cabinetDepth + frontOffset; // 前排纵深位置
 
         batteryDummy.position.set(xPos + offsetX, yPos, zPos);
         batteryDummy.updateMatrix();
@@ -682,7 +682,7 @@ const createBatteryModels = async (
         if (batteryCounter > batteryNum) break; // 超过电池总数则停止
         const xPos = (colIndex - 10) * cabinetWidth - 30 + posInBack * 20; // 水平方向
         const yPos = layer * layerHeight + 20; // 垂直方向
-        const zPos = -(rowIndex - 1) * cabinetDepth + backOffset; // 后排纵深位置
+        const zPos = -(rowIndex - 2) * cabinetDepth + backOffset; // 后排纵深位置
 
         batteryDummy.position.set(xPos + offsetX, yPos, zPos);
         batteryDummy.updateMatrix();

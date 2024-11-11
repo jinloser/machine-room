@@ -1,6 +1,6 @@
 # machine-room
 
-This template should help get you started developing with Vue 3 in Vite.
+基于webgl及threeJS搭建的三维蓄电池机房。大量模型数据秒加载~秒渲染~
 
 ## Recommended IDE Setup
 
