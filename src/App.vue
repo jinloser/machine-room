@@ -818,7 +818,7 @@ const initScene = async () => {
   createCubeWall(10, 300, 2000, 0, matArrayB, -1000, 150, 0, '墙面');
   createCubeWall(10, 300, 2000, 1, matArrayB, 1000, 150, 0, '墙面');
   createCubeWall(10, 300, 2000, 1.5, matArrayB, 0, 150, -1000, '墙面');
-  // createCubeWall(10, 300, 2000, 1.5, matArrayB, 0, 150, 1000, '墙面');
+
   //创建挖了门的墙
   var wall = returnWallObject(
     2000,
@@ -932,7 +932,7 @@ const initControls = () => {
   controls.target.set(0, 100, 0);
   // 限制相机的缩放距离
   controls.minDistance = 50;
-  controls.maxDistance = 3000;
+  controls.maxDistance = 3500;
   controls.update();
 };
 
