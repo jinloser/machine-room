@@ -1,6 +1,6 @@
 # machine-room
 
-基于webgl及threeJS搭建的三维蓄电池机房。大量模型数据秒加载~秒渲染，动态计算模型位置及模型动画功能。
+基于webgl及threeJS搭建的三维蓄电池机房。大量模型数据秒加载~秒渲染，动态计算模型位置，
 
 ## Recommended IDE Setup
 
